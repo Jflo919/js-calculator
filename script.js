@@ -49,6 +49,17 @@ keys.addEventListener('click', e => {
       // need to create a separate calculate function
         const calculate = (n1, operator, n2) => {
             // Perform calculation and return calculated value.
+            let result = '';
+            if (operator === 'add') {
+                result = n1 + n2;
+            } else if (operator === 'subtract') {
+                result = n1 - n2;
+            } else if (operator === 'multiply') {
+                result = n1 * n2;
+            } else if (operator === 'divide') {
+                result = n1 / n2;
+            }
+            return result;
         }
         display.textContent = calculate(firstValue, operator, secondValue);
         }
